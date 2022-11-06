@@ -131,11 +131,3 @@ export const Projects = () => {
     </section >
   )
 }
-
-
-{/* <Col size={12} sm={6} md={4} >
-<div style={{ alignItems: "center", alignSelf: "center", display: "flex", justifyContent: "center" }}>
-  <a href={process.env.REACT_APP_MEMOTEST_SOURCE}><img src={iconDownload} alt="Source Code" /></a>
-  <span>{'Source Code'}</span>
-</div>
-</Col> */}
