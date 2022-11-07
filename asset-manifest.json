@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-react/static/css/main.bf32122c.css",
-    "main.js": "/Portfolio-react/static/js/main.9c1c51be.js",
+    "main.js": "/Portfolio-react/static/js/main.c4a9441a.js",
     "static/js/787.fb771931.chunk.js": "/Portfolio-react/static/js/787.fb771931.chunk.js",
     "static/media/memotest_3.jpg": "/Portfolio-react/static/media/memotest_3.85374c26e83ac611cd47.jpg",
     "static/media/memotest_6.jpg": "/Portfolio-react/static/media/memotest_6.e193ec786b4f0b146076.jpg",
@@ -9,6 +9,7 @@
     "static/media/memotest_2.jpg": "/Portfolio-react/static/media/memotest_2.0bfcb13a89daf24216b3.jpg",
     "static/media/memotest_5.jpg": "/Portfolio-react/static/media/memotest_5.a7543e633f49b2a0ec7f.jpg",
     "static/media/memotest_1.jpg": "/Portfolio-react/static/media/memotest_1.61063522feafdf6d1a63.jpg",
+    "static/media/pokedex_1.jpg": "/Portfolio-react/static/media/pokedex_1.6b909d493a20d79f3d0d.jpg",
     "static/media/CentraNo2-Bold.ttf": "/Portfolio-react/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/Portfolio-react/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/Portfolio-react/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
@@ -38,11 +39,11 @@
     "static/media/icon-unity.svg": "/Portfolio-react/static/media/icon-unity.ce41f1da73c17019ab15675b5f102dce.svg",
     "static/media/icon-vue.svg": "/Portfolio-react/static/media/icon-vue.a9ef3938d4960ac238e9c64d78783931.svg",
     "main.bf32122c.css.map": "/Portfolio-react/static/css/main.bf32122c.css.map",
-    "main.9c1c51be.js.map": "/Portfolio-react/static/js/main.9c1c51be.js.map",
+    "main.c4a9441a.js.map": "/Portfolio-react/static/js/main.c4a9441a.js.map",
     "787.fb771931.chunk.js.map": "/Portfolio-react/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf32122c.css",
-    "static/js/main.9c1c51be.js"
+    "static/js/main.c4a9441a.js"
   ]
 }
