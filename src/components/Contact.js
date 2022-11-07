@@ -85,7 +85,6 @@ export const Contact = () => {
                           <hr></hr>
                           {status.message && <p className={status.succes ? "success" : "danger"}>{status.message}</p>}
                           <hr></hr>
-
                           <button type="submit"><span>{buttonText}</span></button>
                         </Col>
                       </Row>
