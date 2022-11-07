@@ -68,7 +68,6 @@ export const Banner = () => {
                     <HashLink smooth to='#connect'>
                       <button><span>Let’s Connect</span><ArrowRightCircle size={25}/></button>
                       </HashLink>
-                    
                   </div>}
               </TrackVisibility>
             </Col>
