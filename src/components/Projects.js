@@ -1,12 +1,13 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import { ArrowRightCircle, Download } from 'react-bootstrap-icons';
+import { ArrowRightCircle, Download, Terminal } from 'react-bootstrap-icons';
 import memotest1 from "../assets/img/proyects/memotest/memotest_1.jpg";
 import memotest2 from "../assets/img/proyects/memotest/memotest_2.jpg"
 import memotest3 from "../assets/img/proyects/memotest/memotest_3.jpg";
 import memotest4 from "../assets/img/proyects/memotest/memotest_4.jpg";
 import memotest5 from "../assets/img/proyects/memotest/memotest_5.jpg";
 import memotest6 from "../assets/img/proyects/memotest/memotest_6.jpg";
+import pokedex1 from "../assets/img/proyects/pokedex/pokedex_1.jpg";
 
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -44,6 +45,13 @@ export const Projects = () => {
       description: "There's not much here, just my name. Although we can appreciate the random background accompanied by a retro fantasy music :)",
       imgUrl: memotest5,
     },
+  ];
+  const pokedex_items = [
+    {
+      title: "Pokedex",
+      description: "here we can see our pokemons",
+      imgUrl: pokedex1,
+    }
   ];
 
   return (
@@ -95,19 +103,19 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                       <Row>
-                          <p>{' Videogame developed in '}<b>Unity</b>{' using '}<b>C#</b><br></br>{'The memotest is a memory game that consists of finding matching pairs of cards.'}</p>
+                          <p>{' Pokedex created in '}<b>React</b>{' this application offers an interface (responsive) that allows viewing the Pokemons database using an '}<b>REST API </b><a href="https://pokeapi.co/">(https://pokeapi.co/)</a></p>
                             <Row style={{ alignItems: "center", display: "flex", justifyContent: "space-evenly", marginBottom: "30px",margiTop: "-40px"}}>
                               <Col size={6} sm={6} md={3}>
-                                <button><span><a href={process.env.REACT_APP_MEMOTEST_SOURCE}>Source Code</a></span><ArrowRightCircle size={25} /></button>
+                                <button><span><a href={process.env.REACT_APP_POKEDEX_SOURCE}>Source Code</a></span><ArrowRightCircle size={25} /></button>
                               </Col>
                               <Col size={6} sm={6} md={3}>
-                                <button><span><a href={process.env.REACT_APP_MEMOTEST_BUILD}>Download Build</a></span><Download size={25} /></button>
+                                <button><span><a href={process.env.REACT_APP_POKEDEX_BUILD}>Running Build</a></span><Terminal size={25} /></button>
                               </Col>
                             </Row>
                         </Row>
                         <Row>
                           {
-                            memotest_items.map((project, index) => {
+                            pokedex_items.map((project, index) => {
                               return (
                                 <ProjectCard
                                   key={index}
