@@ -19,21 +19,21 @@ import iconGit from '../assets/img/skills/icon-git.svg'
 
 
 const skills = [
-  { name: "React", percentage: 80,icon: iconReact},
+  { name: "React", percentage: 80, icon: iconReact },
   { name: "JavaScript", percentage: 90, icon: iconJs },
   { name: "Java", percentage: 80, icon: iconJava },
-  { name: "NodeJS", percentage: 70,icon: iconNodeJs},
-  { name: "Vue", percentage: 60,icon: iconVue },
-  { name: "HTML", percentage: 75,icon: iconHtml },  
-  { name: "CSS", percentage: 75, icon: iconCss },  
-  { name: "Bootstrap", percentage: 75,icon: iconBootstrap },  
-  { name: "Git", percentage: 85,icon: iconGit },  
-  { name: "C#", percentage: 55,icon: iconCsharp },  
-  { name: "Unity", percentage: 60,icon: iconUnity },  
-  { name: "MySQL", percentage: 65,icon: iconMysql },  
-  { name: "Mongo DB", percentage: 65,icon: iconMongodb },  
-  { name: "Kotlin", percentage: 25,icon: iconKotlin },  
-  { name: "R Studio", percentage: 30,icon: iconR }
+  { name: "NodeJS", percentage: 70, icon: iconNodeJs },
+  { name: "Vue", percentage: 60, icon: iconVue },
+  { name: "HTML", percentage: 75, icon: iconHtml },
+  { name: "CSS", percentage: 75, icon: iconCss },
+  { name: "Bootstrap", percentage: 75, icon: iconBootstrap },
+  { name: "Git", percentage: 85, icon: iconGit },
+  { name: "C#", percentage: 55, icon: iconCsharp },
+  { name: "Unity", percentage: 60, icon: iconUnity },
+  { name: "MySQL", percentage: 65, icon: iconMysql },
+  { name: "Mongo DB", percentage: 65, icon: iconMongodb },
+  { name: "Kotlin", percentage: 25, icon: iconKotlin },
+  { name: "R Studio", percentage: 30, icon: iconR }
 ]
 
 export const Skills = () => {
