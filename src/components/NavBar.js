@@ -35,7 +35,7 @@ export const NavBar = (props) => {
     <Router>
       <Navbar id="navbar" expand="md" className={scrolled ? "scrolled" : ""}>
         <Container >
-          <Navbar.Brand href="/#">
+          <Navbar.Brand href="#aboutme">
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -48,7 +48,7 @@ export const NavBar = (props) => {
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>
                 <span><Sliders size={20}/> {t('common.skill')}</span></Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'proyect' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('proyects')}>
-                <span><Briefcase size={20}/> {t('common.proyect')}</span></Nav.Link>
+                <span><Briefcase size={20}/> {t('common.project')}</span></Nav.Link>
               <Nav.Link className='navbar-link' onClick={() => props.changeLanguage()}>
                 <span><Translate size={20}/> {t('common.language')}</span></Nav.Link>
             </Nav>
