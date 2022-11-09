@@ -9,7 +9,6 @@ import memotest4 from "../assets/img/projects/memotest/memotest_4.jpg";
 import memotest5 from "../assets/img/projects/memotest/memotest_5.jpg";
 import memotest6 from "../assets/img/projects/memotest/memotest_6.jpg";
 import pokedex1 from "../assets/img/projects/pokedex/pokedex_1.jpg";
-
 import { Markup } from "interweave"
 
 import 'animate.css';
@@ -71,7 +70,7 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">{t('Project.name.1')}</Nav.Link>
+                        <Nav.Link eventKey="first">{t('project.name.1')}</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="second">{t('project.name.2')}</Nav.Link>
