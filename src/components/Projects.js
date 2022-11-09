@@ -1,48 +1,53 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import { ArrowRightCircle, Download, Terminal } from 'react-bootstrap-icons';
-import memotest1 from "../assets/img/proyects/memotest/memotest_1.jpg";
-import memotest2 from "../assets/img/proyects/memotest/memotest_2.jpg"
-import memotest3 from "../assets/img/proyects/memotest/memotest_3.jpg";
-import memotest4 from "../assets/img/proyects/memotest/memotest_4.jpg";
-import memotest5 from "../assets/img/proyects/memotest/memotest_5.jpg";
-import memotest6 from "../assets/img/proyects/memotest/memotest_6.jpg";
-import pokedex1 from "../assets/img/proyects/pokedex/pokedex_1.jpg";
+import { useTranslation } from 'react-i18next';
+import memotest1 from "../assets/img/projects/memotest/memotest_1.jpg";
+import memotest2 from "../assets/img/projects/memotest/memotest_2.jpg"
+import memotest3 from "../assets/img/projects/memotest/memotest_3.jpg";
+import memotest4 from "../assets/img/projects/memotest/memotest_4.jpg";
+import memotest5 from "../assets/img/projects/memotest/memotest_5.jpg";
+import memotest6 from "../assets/img/projects/memotest/memotest_6.jpg";
+import pokedex1 from "../assets/img/projects/pokedex/pokedex_1.jpg";
+
+import { Markup } from "interweave"
 
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
+  const { t } = useTranslation();
+
   const memotest_items = [
     {
-      title: "Main Menu",
-      description: "here we can find three options, play, credits, and exit. Fun fact, the background consists of randomly created cards that fall to the bottom",
+      title: t('project.memotest.p1Title'),
+      description: t('project.memotest.p1Desc'),
       imgUrl: memotest1,
     },
     {
-      title: "Difficulty selection menu",
-      description: "in this section we can choose between 7 different difficulties, each one varies the total number of cards and attempts",
+      title: t('project.memotest.p2Title'),
+      description: t('project.memotest.p2Desc'),
       imgUrl: memotest2,
     },
     {
-      title: "Game table",
-      description: "here is the board where initially we see all the cards face down, to play we must select one, which is revealed to us and then choose another, if the image matches then both cards disappear from the board (with a fancy animation)",
+      title: t('project.memotest.p3Title'),
+      description: t('project.memotest.p3Desc'),
       imgUrl: memotest3,
     },
     {
-      title: "Game over",
-      description: "If the images do not match, both cards will be turned face down again, and we will lose an attempt. If we run out of attempts, we lose the game",
+      title: t('project.memotest.p4Title'),
+      description: t('project.memotest.p4Desc'),
       imgUrl: memotest4,
     },
     {
-      title: "Pause menu",
-      description: "We also have a pause menu, from which we can resume it later, restart the game, or return to the main menu.",
+      title: t('project.memotest.p5Title'),
+      description: t('project.memotest.p5Desc'),
       imgUrl: memotest6,
     },
     {
-      title: "Credit menu",
-      description: "There's not much here, just my name. Although we can appreciate the random background accompanied by a retro fantasy music :)",
+      title: t('project.memotest.p6Title'),
+      description: t('project.memotest.p6Desc'),
       imgUrl: memotest5,
     },
   ];
@@ -62,29 +67,29 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Projects</h2>
+                  <h2>{t('common.project')}</h2>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Memotest</Nav.Link>
+                        <Nav.Link eventKey="first">{t('Project.name.1')}</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Pokedex</Nav.Link>
+                        <Nav.Link eventKey="second">{t('project.name.2')}</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">WIP..</Nav.Link>
+                        <Nav.Link eventKey="third">{t('project.name.3')}</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
-                          <p>{' Videogame developed in '}<b>Unity</b>{' using '}<b>C#</b><br></br>{'The memotest is a memory game that consists of finding matching pairs of cards.'}</p>
+                          <p><Markup content={t('project.memotest.desc')}/></p>
                             <Row style={{ alignItems: "center", display: "flex", justifyContent: "space-evenly", marginBottom: "30px",margiTop: "-40px"}}>
                               <Col size={6} sm={6} md={3}>
-                                <button><span><a href={process.env.REACT_APP_MEMOTEST_SOURCE}>Source Code</a></span><ArrowRightCircle size={25} /></button>
+                              <button><span><a href={process.env.REACT_APP_MEMOTEST_SOURCE}>{t('common.source')}</a></span><ArrowRightCircle size={25} /></button>
                               </Col>
                               <Col size={6} sm={6} md={3}>
-                                <button><span><a href={process.env.REACT_APP_MEMOTEST_BUILD}>Download Build</a></span><Download size={25} /></button>
+                                <button><span><a href={process.env.REACT_APP_MEMOTEST_BUILD}>{t('common.download')}</a></span><Download size={25} /></button>
                               </Col>
                             </Row>
                         </Row>
@@ -103,13 +108,13 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                       <Row>
-                          <p>{' Pokedex created in '}<b>React</b>{' this application offers an interface (responsive) that allows viewing the Pokemons database using an '}<b>REST API </b><a href="https://pokeapi.co/">(https://pokeapi.co/)</a></p>
+                          <p><Markup content={t('project.pokedex.desc')}/></p>
                             <Row style={{ alignItems: "center", display: "flex", justifyContent: "space-evenly", marginBottom: "30px",margiTop: "-40px"}}>
                               <Col size={6} sm={6} md={3}>
-                                <button><span><a href={process.env.REACT_APP_POKEDEX_SOURCE}>Source Code</a></span><ArrowRightCircle size={25} /></button>
+                                <button><span><a href={process.env.REACT_APP_POKEDEX_SOURCE}>{t('common.source')}</a></span><ArrowRightCircle size={25} /></button>
                               </Col>
                               <Col size={6} sm={6} md={3}>
-                                <button><span><a href={process.env.REACT_APP_POKEDEX_BUILD}>Running Build</a></span><Terminal size={25} /></button>
+                                <button><span><a href={process.env.REACT_APP_POKEDEX_BUILD}>{t('common.build')}</a></span><Terminal size={25} /></button>
                               </Col>
                             </Row>
                         </Row>
@@ -127,7 +132,7 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>{"Working on next proyect..."}</p>
+                        <p>{t('project.wip.desc')}</p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

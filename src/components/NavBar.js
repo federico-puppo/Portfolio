@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Whatsapp,Github, Linkedin,FileEarmarkPerson} from "react-bootstrap-icons";
+import { Whatsapp, Github, Linkedin, FileEarmarkPerson, Translate, Envelope, Briefcase, Sliders, ChatSquareHeart } from "react-bootstrap-icons";
 import logo from '../assets/img/frog.svg';
 import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
-export const NavBar = () => {
 
+export const NavBar = (props) => {
+
+  const { t } = useTranslation();
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,46 +31,41 @@ export const NavBar = () => {
     setActiveLink(value);
   }
 
-  
-
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
+      <Navbar id="navbar" expand="md" className={scrolled ? "scrolled" : ""}>
+        <Container >
           <Navbar.Brand href="/#">
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="ms-auto">
-              <Nav.Link href="#aboutme" className={activeLink === 'aboutme' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('aboutme')}>About Me</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#aboutme" className={activeLink === 'aboutme' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('aboutme')}>
+                <span><ChatSquareHeart size={20}/> {t('common.about')}</span></Nav.Link>
+              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>
+                <span><Sliders size={20}/> {t('common.skill')}</span></Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'proyect' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('proyects')}>
+                <span><Briefcase size={20}/> {t('common.proyect')}</span></Nav.Link>
+              <Nav.Link className='navbar-link' onClick={() => props.changeLanguage()}>
+                <span><Translate size={20}/> {t('common.language')}</span></Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href={process.env.REACT_APP_LINKEDIN} ><Linkedin color="white" size={24}/></a>
-                <a href={process.env.REACT_APP_GITHUB}><Github color="white" size={24}/></a>
-                <a href={process.env.REACT_APP_WHATSAPP}><Whatsapp color="white" size={24}/></a>
-                <a href={process.env.REACT_APP_CV_LINK}><FileEarmarkPerson color="white" size={24} /></a>
+                <a href={process.env.REACT_APP_LINKEDIN} target="_blank" rel="noopener noreferrer"><Linkedin size={24} /></a>
+                <a href={process.env.REACT_APP_GITHUB} target="_blank" rel="noopener noreferrer"><Github size={24} /></a>
+                <a href={process.env.REACT_APP_WHATSAPP} target="_blank" rel="noopener noreferrer"><Whatsapp size={24} /></a>
+                <a href={process.env.REACT_APP_CV_LINK} target="_blank" rel="noopener noreferrer"><FileEarmarkPerson size={24} /></a>
               </div>
-              <HashLink smooth to='#connect'>
-                <button>Let’s Connect</button>
+              <HashLink smooth to='#connect' >
+                <button onClick={() => onUpdateActiveLink('home')}>{t('common.connect')} <Envelope size={24} /></button>
               </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
+      </Router>
   )
 }
-
-// <span className="navbar-text">
-// <div className="social-icon">
-//   <a href={process.env.REACT_APP_LINKEDIN} ><img src={iconLinkedin} alt="Linkedin" /></a>
-//   <a href={process.env.REACT_APP_GITHUB}><img src={iconGithub} alt="Github" /></a>
-//   <a href={process.env.REACT_APP_WHATSAPP}><Whatsapp color="white" size={24} /></a>
-//   <a href={process.env.REACT_APP_CV_LINK}><img src={iconResume} alt="Resume" /></a>
-// </div>

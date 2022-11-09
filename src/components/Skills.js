@@ -1,5 +1,6 @@
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Carousel from 'react-multi-carousel';
+import { useTranslation } from 'react-i18next';
 import { CircleProgress } from 'react-gradient-progress'
 import iconReact from '../assets/img/skills/icon-react.svg'
 import iconNodeJs from '../assets/img/skills/icon-nodejs.svg'
@@ -36,7 +37,12 @@ const skills = [
   { name: "R Studio", percentage: 30, icon: iconR }
 ]
 
+
+
+
+
 export const Skills = () => {
+  const { t } = useTranslation();
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -63,8 +69,8 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>{`Here some of my skills that i acquired through study, courses and projects.`}</p>
+              <h2>{t('common.skill')}</h2>
+              <p>{t('skill.intro')}</p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 {skills.map((skill) => (
                   <div className="item" key={skill.name}>
