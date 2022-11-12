@@ -66,7 +66,7 @@ export const Banner = () => {
                   <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                     <span className="tagline"><h5>{t('banner.welcome')}</h5></span>
                       <h1>{`${t('banner.greet')}${process.env.REACT_APP_NAME} `}</h1>
-                    <h2><span className="txt-rotate"><span className="wrap">{text}</span></span></h2>
+                    <h2><span className="txt-rotate"><span style={{color:"gold"}}>{"{ "}</span><span className="wrap">{text}</span><span style={{color:"gold"}}>{" }"}</span></span></h2>
                     <p>{t('banner.description')}</p>
                     <button><span><a href={process.env.REACT_APP_CV_LINK} target="_blank" rel="noopener noreferrer" >{t('common.cv')}</a></span><FileEarmarkPerson size={25} /></button>
                     <HashLink smooth to='#connect'>

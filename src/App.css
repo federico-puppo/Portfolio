@@ -321,7 +321,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner p {
-  color: #B8B8B8;
+  color: #e6e6e6;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -370,20 +370,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate>.wrap {
   border-right: 0.08em solid #666;
 
-  /*animation: flash 3s linear infinite;*/
+  animation: flashBar 1.2s linear infinite;
 }
 
-@keyframes flash {
+@keyframes flashBar {
   0% {
-    transform: translateY(-20px);
+    border-right:  0.08em solid gray;
   }
 
   50% {
-    transform: translateY(20px);
-  }
+    border-right: transparent;
 
+  }
   100% {
-    transform: translateY(-20px);
+    border-right:  0.08em solid gray;
+
   }
 }
 
@@ -409,7 +410,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   /* margin-top: -60px; */
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .skill h2 {

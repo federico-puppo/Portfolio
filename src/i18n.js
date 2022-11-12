@@ -23,10 +23,10 @@ i18n
           title: {
             t1: "System Analist",
             t2: "Programmer",
-            t3: "Developer",
-            t4: "Full Stack",
-            t5: "Front-End",
-            t6: "Back-End",
+            t3: "Web Designer",
+            t4: "Full-Stack Developer",
+            t5: "Front-End Developer",
+            t6: "Back-End Developer",
           },
           common: {
             about: "About Me",
@@ -94,10 +94,10 @@ i18n
           title: {
             t1: "Analista de Sistemas",
             t2: "Programador",
-            t3: "Desarrollador",
-            t4: "Full Stack",
-            t5: "Front-End",
-            t6: "Back-End",
+            t3: "Diseñador Web",
+            t4: "Desarrollador Full-Stack",
+            t5: "Desarrollador Front-End",
+            t6: "Desarrollador Back-End",
           },
           common: {
             about: "Sobre mi",
