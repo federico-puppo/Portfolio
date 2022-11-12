@@ -1,5 +1,5 @@
 steps:
-  - name: My first action
+  - job: Set ENV
     env:
       REACT_APP_LANGUAGE: ${{ secrets.REACT_APP_LANGUAGE }}
       REACT_APP_NAME: ${{ secrets.REACT_APP_NAME }}
