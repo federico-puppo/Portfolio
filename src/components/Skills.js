@@ -17,6 +17,7 @@ import iconMongodb from '../assets/img/skills/icon-mongodb.svg'
 import iconKotlin from '../assets/img/skills/icon-kotlin.svg'
 import iconR from '../assets/img/skills/icon-r.svg'
 import iconGit from '../assets/img/skills/icon-git.svg'
+import TrackVisibility from 'react-on-screen';
 
 
 const skills = [
@@ -71,15 +72,16 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>{t('common.skill')}</h2>
               <p>{t('skill.intro')}</p>
-              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                {skills.map((skill) => (
-                  <div className="item" key={skill.name}>
-                    <CircleProgress fontSize="30px" percentage={skill.percentage} strokeWidth={12} primaryColor={['#39FF14', '#007fff']} secondaryColor="#000" />
-                    <img className="social-icon" src={skill.icon} alt={skill.name}></img>
-                    <h5>{skill.name}</h5>
-                  </div>
-                ))}
-              </Carousel>
+                  <Carousel responsive={responsive} infinite={true} swipeable={true} className="carousel skill-slider"
+                    autoPlaySpeed={2000} autoPlay>
+                    {skills.map((skill) => (
+                      <div className="item" key={skill.name}>
+                        <CircleProgress fontSize="30px" percentage={skill.percentage} strokeWidth={12} primaryColor={['#39FF14', '#007fff']} secondaryColor="#000" />
+                        <img className="social-icon" src={skill.icon} alt={skill.name}></img>
+                        <h5>{skill.name}</h5>
+                      </div>
+                    ))}
+                  </Carousel>
             </div>
           </div>
         </div>

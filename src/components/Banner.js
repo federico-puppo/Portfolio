@@ -1,3 +1,4 @@
+import 'animate.css';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FileEarmarkPerson, Envelope } from 'react-bootstrap-icons';
@@ -5,7 +6,6 @@ import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from "react-router-dom";
 import headerImg from "../assets/img/me.svg";
 import TrackVisibility from 'react-on-screen';
-import 'animate.css';
 import { useTranslation } from 'react-i18next';
 
 
@@ -34,7 +34,6 @@ export const Banner = () => {
     const i = loopNum % toRotate.length;
     const fullText = toRotate[i];
     const updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
     setText(updatedText);
 
     if (isDeleting) {
@@ -49,7 +48,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(220);
+      setDelta(200);
     } else {
       setIndex(index => index + 1);
     }
@@ -73,7 +72,6 @@ export const Banner = () => {
                     <HashLink smooth to='#connect'>
                       <button><span>{t('common.connect')}</span><Envelope size={25} /></button>
                     </HashLink>
-
                   </div>}
               </TrackVisibility>
             </Col>

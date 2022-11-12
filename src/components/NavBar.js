@@ -12,6 +12,8 @@ export const NavBar = (props) => {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,16 +31,18 @@ export const NavBar = (props) => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    setExpanded(false);
   }
 
+  
   return (
     <Router>
-      <Navbar id="navbar" expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar id="navbar" expand="md" className={scrolled ? "scrolled" : ""} expanded={expanded}>
         <Container >
           <Navbar.Brand href="#aboutme">
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} >
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" >
@@ -47,7 +51,7 @@ export const NavBar = (props) => {
                 <span><ChatSquareHeart size={20}/> {t('common.about')}</span></Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>
                 <span><Sliders size={20}/> {t('common.skill')}</span></Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'proyect' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('proyects')}>
+              <Nav.Link href="#projects" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>
                 <span><Briefcase size={20}/> {t('common.project')}</span></Nav.Link>
               <Nav.Link className='navbar-link' onClick={() => props.changeLanguage()}>
                 <span><Translate size={20}/> {t('common.language')}</span></Nav.Link>

@@ -50,6 +50,7 @@ export const Projects = () => {
       imgUrl: memotest5,
     },
   ];
+  
   const pokedex_items = [
     {
       title: "Pokedex",

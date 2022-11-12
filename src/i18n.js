@@ -102,7 +102,7 @@ i18n
           common: {
             about: "Sobre mi",
             skill: "Habilidades",
-            proyect: "Proyectos",
+            project: "Proyectos",
             connect: "Contactame",
             cv: "Descargar CV",
             source: "Código Fuente",
