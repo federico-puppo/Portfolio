@@ -1,4 +1,4 @@
-import './style.scss';
+import "./style.scss";
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import {
@@ -61,7 +61,7 @@ export const NavBar = (props) => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto me-auto">
               <Nav.Link
                 href="#aboutme"
                 className={

@@ -1,5 +1,6 @@
+import "./style.scss";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "../ProjectCard";
+import { ProjectCard } from "./ProjectCard";
 import { ArrowRightCircle, Download, Terminal } from "react-bootstrap-icons";
 import { useTranslation } from "react-i18next";
 import memotest1 from "../../assets/img/projects/memotest/memotest_1.jpg";

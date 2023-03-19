@@ -1,4 +1,5 @@
 import { Col } from "react-bootstrap";
+import "./style.scss";
 
 export const ProjectCard = ({ title, description, imgUrl }) => {
   return (

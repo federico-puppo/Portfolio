@@ -1,4 +1,4 @@
-import "./style.scss"
+import "./style.scss";
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 import { useTranslation } from "react-i18next";
