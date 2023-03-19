@@ -1,12 +1,12 @@
 ### EN ###
 
-# Personal Portfolio
+Personal Portfolio
 
 ```
 My name is Federico Puppo and this is my personal portfolio where you can see my projects and everything I'm programming
 ```
 
-## Built Using:
+Built Using:
 
 - [React.js](https://react.dev/)
 - [React bootstrap](https://react-bootstrap.github.io/)
@@ -17,13 +17,13 @@ My name is Federico Puppo and this is my personal portfolio where you can see my
 
 ### ES ###
 
-# Portafolio Personal
+Portafolio Personal
 
 ```
 Mi nombre es Federico Puppo y este es mi portafolio personal donde puedes ver mis proyectos y todo lo que estoy programando
 ```
 
-## Tecnologías Utilizadas:
+Tecnologías Utilizadas:
 
 - [React.js](https://react.dev/)
 - [React bootstrap](https://react-bootstrap.github.io/)
