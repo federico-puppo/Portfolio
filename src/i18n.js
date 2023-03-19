@@ -11,7 +11,7 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    debug: true,
+    debug: false,
     lng: 'es',
     fallbackLng: 'en',
     interpolation: {
@@ -124,7 +124,7 @@ i18n
             name: {
               1: "Memotest",
               2: "Pokedex",
-              3: "En progreso.."
+              3: "..."
             },
             memotest: {
               desc: 'Videojuego desarrollado en <b>Unity</b> usando <b>C#</b>.<br></br>El Memotest es un juego de memoria que consiste en encontrar parejas de cartas iguales.',

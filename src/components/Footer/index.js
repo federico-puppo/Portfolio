@@ -1,5 +1,6 @@
+import "./style.scss";
+import logo from "../../assets/img/frog.svg";
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../assets/img/frog.svg";
 import { Whatsapp, Github, Linkedin } from "react-bootstrap-icons";
 
 export const Footer = () => {
@@ -9,6 +10,7 @@ export const Footer = () => {
           <Row className="align-items-center">
             <Col size={12} sm={6}>
               <a href="#aboutme"><img src={logo} alt="Logo" /></a>
+              <span href="#aboutme">why a frog?</span>
             </Col>
             <Col size={12} sm={6} className="text-center text-sm-end">
               <div className="social-icon">
@@ -16,7 +18,7 @@ export const Footer = () => {
                 <a href={process.env.REACT_APP_GITHUB} target="_blank" rel="noopener noreferrer"><Github color="white" size={24} /></a>
                 <a href={process.env.REACT_APP_WHATSAPP} target="_blank" rel="noopener noreferrer"><Whatsapp color="white" size={24} /></a>
               </div>
-              <p>Copyright 2022. All Rights Reserved</p>
+              <p>Copyright 2023. All Rights Reserved</p>
             </Col>
           </Row>
         </Container>
